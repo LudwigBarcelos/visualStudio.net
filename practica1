@@ -1,0 +1,2 @@
+Crear un programa con la clase trabajador que contenga Id, Nombre, ApellidoPaterno, ApellidoMaterno, Salario, Puesto.
+Crear las clases que ordenen los trabajadores por ApellidoPaterno, por Salario y solo imprima los puestos de Director.
