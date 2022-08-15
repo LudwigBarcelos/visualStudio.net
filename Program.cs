@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +12,8 @@ namespace LINQ2
         {
             ControlPersonas con1= new ControlPersonas();
             con1.getLista();
+            int id =Convert.ToInt32( Console.ReadLine());
+            con1.getPersona(id);
 
         }
     }
@@ -26,6 +28,9 @@ namespace LINQ2
         }
         public void getNombre() {
             Console.WriteLine("Nombre: {0} con Nota {1}", Nombre, Nota);
+        }
+        public void getDatos() {
+            Console.WriteLine("Id: {0} Nombre:  {1}  Edad: {2} Nota:{3} ", Id, Nombre,Edad, Nota);
         }
     }
     class ControlPersonas
@@ -52,7 +57,23 @@ namespace LINQ2
                 persona2.getNota();
             }
             Console.ReadKey();
+            IEnumerable<Persona> per3 = from Persona in listaPersonas orderby Persona.Nombre select Persona;
+            foreach (Persona persona3 in per3)
+            {
+                persona3.getNombre();
+            }
+            //Console.ReadKey();
         }
+        public void getPersona(int  Id) {
+            IEnumerable<Persona> per = from Persona in listaPersonas where Persona.Id==Id select Persona;
+            foreach (Persona persona in per)
+            {
+                persona.getDatos();
+            }
+            Console.ReadKey();
+        }
+            
+
     }
     
 
