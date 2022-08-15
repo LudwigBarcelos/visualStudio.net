@@ -12,8 +12,7 @@ namespace LINQ1._5
         {
             ControlAlumnos con1 = new ControlAlumnos();
             con1.getNombres();
-            //con1.getLuis();
-            //con1.getAprobados();
+           
         }
     }
     class ControlAlumnos
