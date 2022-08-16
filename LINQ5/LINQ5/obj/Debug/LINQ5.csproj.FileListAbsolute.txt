@@ -1,0 +1,11 @@
+C:\Users\ludwi\source\repos\LINQ5\LINQ5\bin\Debug\LINQ5.exe.config
+C:\Users\ludwi\source\repos\LINQ5\LINQ5\bin\Debug\LINQ5.exe
+C:\Users\ludwi\source\repos\LINQ5\LINQ5\bin\Debug\LINQ5.pdb
+C:\Users\ludwi\source\repos\LINQ5\LINQ5\obj\Debug\LINQ5.csproj.AssemblyReference.cache
+C:\Users\ludwi\source\repos\LINQ5\LINQ5\obj\Debug\LINQ5.csproj.SuggestedBindingRedirects.cache
+C:\Users\ludwi\source\repos\LINQ5\LINQ5\obj\Debug\LINQ5.Form1.resources
+C:\Users\ludwi\source\repos\LINQ5\LINQ5\obj\Debug\LINQ5.Properties.Resources.resources
+C:\Users\ludwi\source\repos\LINQ5\LINQ5\obj\Debug\LINQ5.csproj.GenerateResource.cache
+C:\Users\ludwi\source\repos\LINQ5\LINQ5\obj\Debug\LINQ5.csproj.CoreCompileInputs.cache
+C:\Users\ludwi\source\repos\LINQ5\LINQ5\obj\Debug\LINQ5.exe
+C:\Users\ludwi\source\repos\LINQ5\LINQ5\obj\Debug\LINQ5.pdb
