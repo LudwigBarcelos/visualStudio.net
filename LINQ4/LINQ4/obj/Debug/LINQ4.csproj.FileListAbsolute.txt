@@ -1,0 +1,11 @@
+C:\Users\ludwi\source\repos\LINQ4\LINQ4\bin\Debug\LINQ4.exe.config
+C:\Users\ludwi\source\repos\LINQ4\LINQ4\bin\Debug\LINQ4.exe
+C:\Users\ludwi\source\repos\LINQ4\LINQ4\bin\Debug\LINQ4.pdb
+C:\Users\ludwi\source\repos\LINQ4\LINQ4\obj\Debug\LINQ4.csproj.AssemblyReference.cache
+C:\Users\ludwi\source\repos\LINQ4\LINQ4\obj\Debug\LINQ4.csproj.SuggestedBindingRedirects.cache
+C:\Users\ludwi\source\repos\LINQ4\LINQ4\obj\Debug\LINQ4.Form1.resources
+C:\Users\ludwi\source\repos\LINQ4\LINQ4\obj\Debug\LINQ4.Properties.Resources.resources
+C:\Users\ludwi\source\repos\LINQ4\LINQ4\obj\Debug\LINQ4.csproj.GenerateResource.cache
+C:\Users\ludwi\source\repos\LINQ4\LINQ4\obj\Debug\LINQ4.csproj.CoreCompileInputs.cache
+C:\Users\ludwi\source\repos\LINQ4\LINQ4\obj\Debug\LINQ4.exe
+C:\Users\ludwi\source\repos\LINQ4\LINQ4\obj\Debug\LINQ4.pdb
