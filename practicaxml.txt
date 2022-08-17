@@ -1,5 +1,5 @@
 Realizar el desplegado del XML en un TextBox 
 Agregar 3 botones
-  a) Boton1.- Mostrar en otro TextBox la lista de nombres
+  a) Boton1.- Mostrar en otro TextBox la lista de todos los nombres
   b) Boton 2.- Mostrar en otro TextBox la lista de grupos
   c) Boton 3.- Mostrar en otro TextBox la lista de Cantantes
