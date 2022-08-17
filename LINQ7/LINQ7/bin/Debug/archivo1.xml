@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Personas>
+<Alumnos>
+  <Alumno Id="0">
+    <Nombre>Pedro</Nombre>
+    <Calif>5</Calif>
+  </Alumno>
+  <Alumno Id="1">
+    <Nombre>Jorge</Nombre>
+    <Calif>8</Calif>
+  </Alumno>
+  <Alumno Id="2">
+    <Nombre>Andres</Nombre>
+    <Calif>3</Calif>
+  </Alumno>
+  <Alumno Id="3">
+    <Nombre>Sandra</Nombre>
+    <Calif>6</Calif>
+  </Alumno>
+  <Alumno Id="4">
+    <Nombre>Jaime</Nombre>
+    <Calif>10</Calif>
+  </Alumno>
+    <Alumno Id="5">
+    <Nombre>Maria</Nombre>
+    <Calif>8</Calif>
+  </Alumno>
+  <Alumno Id="6">
+    <Nombre>Mario</Nombre>
+    <Calif>7</Calif>
+  </Alumno>
+</Alumnos>
+<Docentes>
+  <Docente Nombre="Jaime">
+  <curso>  POO </curso>
+  </Docente>
+  <Docente Nombre="Fernando">
+  <curso>  Base de Datos </curso>
+  </Docente>
+  <Docente Nombre="Samuel">
+  <curso>  Redes </curso>
+  </Docente>
+</Docentes>
+</Personas>

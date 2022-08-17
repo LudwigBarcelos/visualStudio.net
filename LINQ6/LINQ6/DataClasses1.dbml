@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ejercicio" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LUDWIG-ASUS;Initial Catalog=ejercicio;Integrated Security=True" SettingsObjectName="LINQ6.Properties.Settings" SettingsPropertyName="ejercicioConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.pagos" Member="pagos">
+    <Type Name="pagos">
+      <Column Name="id_pagos" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_trabajador" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_puesto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fechapago" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="semanas" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="montopago" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="puesto_pagos" Member="puesto" ThisKey="id_puesto" OtherKey="id_puesto" Type="puesto" IsForeignKey="true" />
+      <Association Name="trabajador_pagos" Member="trabajador" ThisKey="id_trabajador" OtherKey="id_trabajador" Type="trabajador" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.usuarios" Member="usuarios">
+    <Type Name="usuarios">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="usuario" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="passwd" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="estado" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="tipo_usuario" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.puesto" Member="puesto">
+    <Type Name="puesto">
+      <Column Name="id_puesto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="puesto" Member="puesto1" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="cargo" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="tareas" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Association Name="puesto_pagos" Member="pagos" ThisKey="id_puesto" OtherKey="id_puesto" Type="pagos" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sueldo" Member="sueldo">
+    <Type Name="sueldo">
+      <Column Name="id_sueldo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_trabajador" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_puesto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sueldo" Member="sueldo1" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="trabajador_sueldo" Member="trabajador" ThisKey="id_trabajador" OtherKey="id_trabajador" Type="trabajador" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.trabajador" Member="trabajador">
+    <Type Name="trabajador">
+      <Column Name="id_trabajador" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="apellido_pat" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="apellido_mat" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="direccion" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="telefono" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="num_empleado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_usuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_puesto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="trabajador_pagos" Member="pagos" ThisKey="id_trabajador" OtherKey="id_trabajador" Type="pagos" />
+      <Association Name="trabajador_sueldo" Member="sueldo" ThisKey="id_trabajador" OtherKey="id_trabajador" Type="sueldo" />
+    </Type>
+  </Table>
+</Database>

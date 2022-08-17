@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Comentario: Listado de Alumnos-->
+<Alumnos>
+  <Luis Id="1">
+    <Asignatura>POO</Asignatura>
+    <Calif>9</Calif>
+  </Luis>
+  <Pedro Id="2">
+    <Asignatura>POO</Asignatura>
+    <Calif>8</Calif>
+  </Pedro>
+</Alumnos>

@@ -1,0 +1,11 @@
+C:\Users\ludwi\source\repos\LINQ7\LINQ7\bin\Debug\LINQ7.exe.config
+C:\Users\ludwi\source\repos\LINQ7\LINQ7\bin\Debug\LINQ7.exe
+C:\Users\ludwi\source\repos\LINQ7\LINQ7\bin\Debug\LINQ7.pdb
+C:\Users\ludwi\source\repos\LINQ7\LINQ7\obj\Debug\LINQ7.csproj.AssemblyReference.cache
+C:\Users\ludwi\source\repos\LINQ7\LINQ7\obj\Debug\LINQ7.csproj.SuggestedBindingRedirects.cache
+C:\Users\ludwi\source\repos\LINQ7\LINQ7\obj\Debug\LINQ7.Form1.resources
+C:\Users\ludwi\source\repos\LINQ7\LINQ7\obj\Debug\LINQ7.Properties.Resources.resources
+C:\Users\ludwi\source\repos\LINQ7\LINQ7\obj\Debug\LINQ7.csproj.GenerateResource.cache
+C:\Users\ludwi\source\repos\LINQ7\LINQ7\obj\Debug\LINQ7.csproj.CoreCompileInputs.cache
+C:\Users\ludwi\source\repos\LINQ7\LINQ7\obj\Debug\LINQ7.exe
+C:\Users\ludwi\source\repos\LINQ7\LINQ7\obj\Debug\LINQ7.pdb

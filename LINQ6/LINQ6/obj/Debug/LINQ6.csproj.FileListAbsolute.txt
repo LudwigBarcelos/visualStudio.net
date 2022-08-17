@@ -1,0 +1,15 @@
+C:\Users\ludwi\source\repos\LINQ6\LINQ6\bin\Debug\LINQ6.exe.config
+C:\Users\ludwi\source\repos\LINQ6\LINQ6\bin\Debug\LINQ6.exe
+C:\Users\ludwi\source\repos\LINQ6\LINQ6\bin\Debug\LINQ6.pdb
+C:\Users\ludwi\source\repos\LINQ6\LINQ6\obj\Debug\LINQ6.csproj.AssemblyReference.cache
+C:\Users\ludwi\source\repos\LINQ6\LINQ6\obj\Debug\LINQ6.csproj.SuggestedBindingRedirects.cache
+C:\Users\ludwi\source\repos\LINQ6\LINQ6\obj\Debug\LINQ6.FmElimina.resources
+C:\Users\ludwi\source\repos\LINQ6\LINQ6\obj\Debug\LINQ6.FrmPrincipal.resources
+C:\Users\ludwi\source\repos\LINQ6\LINQ6\obj\Debug\LINQ6.FrmAgrega.resources
+C:\Users\ludwi\source\repos\LINQ6\LINQ6\obj\Debug\LINQ6.FrmModifica.resources
+C:\Users\ludwi\source\repos\LINQ6\LINQ6\obj\Debug\LINQ6.Properties.Resources.resources
+C:\Users\ludwi\source\repos\LINQ6\LINQ6\obj\Debug\LINQ6.csproj.GenerateResource.cache
+C:\Users\ludwi\source\repos\LINQ6\LINQ6\obj\Debug\LINQ6.csproj.CoreCompileInputs.cache
+C:\Users\ludwi\source\repos\LINQ6\LINQ6\obj\Debug\LINQ6.exe
+C:\Users\ludwi\source\repos\LINQ6\LINQ6\obj\Debug\LINQ6.pdb
+C:\Users\ludwi\source\repos\LINQ6\LINQ6\obj\Debug\LINQ6.FrmMuestra.resources

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Alumnos>
+  <Alumno Id="1">
+    <Asignatura> POO </Asignatura>
+    <Calif> 9 </Calif>
+  </Alumno>
+  <Alumno Id="2">
+    <Asignatura> POO </Asignatura>
+    <Calif> 8 </Calif>
+  </Alumno>
+</Alumnos>
