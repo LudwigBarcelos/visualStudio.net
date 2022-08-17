@@ -92,7 +92,29 @@ namespace LINQ7
             var listaNombres = from e in alumnos.Descendants("Nombre")select e.Value;
             foreach (string el in listaNombres) {
                 textBox2.Text = textBox2.Text +" \n " +el+ String.Format(Environment.NewLine);
-            }*/
+            }
+            IEnumerable<string>  calif=
+                   from el in verifica(archivo)
+                   where (int)el.Attribute("Id") > 0
+                   select (string)el.Element("Calif");
+
+            foreach (string str in calif)
+                textBox3.Text= textBox3.Text+" "+str + String.Format(Environment.NewLine);
+            IEnumerable<XElement> verifica(string uri)   {
+                using (XmlReader reader = XmlReader.Create(uri)) {
+                    reader.MoveToContent();
+                    while (!reader.EOF)  {
+                        if (reader.NodeType == XmlNodeType.Element && reader.Name == "Alumno") {
+                            XElement el = XElement.ReadFrom(reader) as XElement;
+                            if (el != null)
+                                yield return el;
+                        }
+                        else{
+                            reader.Read();
+                        }
+                    }
+                }
+            */
             //alumnos.Descendants("Docentes").Remove();
         }
     }
