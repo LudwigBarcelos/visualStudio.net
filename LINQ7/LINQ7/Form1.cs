@@ -115,6 +115,12 @@ namespace LINQ7
                     }
                 }
             */
+            //---
+            /*
+             IEnumerable<XElement> listaDocentes = alumnos.XPathSelectElements("//curso");
+            foreach (XElement ele1 in listaDocentes)
+                textBox3.Text = textBox3.Text + " " + ele1 + String.Format(Environment.NewLine);
+            */
             //alumnos.Descendants("Docentes").Remove();
         }
     }
