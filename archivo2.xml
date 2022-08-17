@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<musica>
+<grupos>
+	<grupo id="01">
+		<nombre>
+			Heroes del Silencio
+		</nombre>
+		<genero>
+			Rock
+		</genero>
+		<compania>
+			Sony Music
+		</compania>
+	</grupo>
+	<grupo id="02">
+		<nombre>
+			Mana
+		</nombre>
+		<genero>
+			Pop
+		</genero>	
+		<compania>
+			RCA
+		</compania>
+	</grupo>
+	<grupo id="03">
+		<nombre>
+			Maldita Vecindad
+		</nombre>	
+		<genero>
+			Rock Urbano
+		</genero>
+		<compania>
+			Eidos
+		</compania>
+	</grupo>
+	<grupo id="04">
+		<nombre>
+			Panteon Rococo
+		</nombre>	
+		<genero>
+			Ska
+		</genero>
+		<compania>
+			Sony Music
+		</compania>
+	</grupo>
+</grupos>
+<solistas>
+	<solista id="01">
+		<nombre>
+			Shakira
+		</nombre>	
+		<genero>
+			Pop
+		</genero>
+		<compania>
+			Sony Music
+		</compania>
+	</solista>
+	<solista id="02">
+		<nombre>
+			Luis Miguel
+		</nombre>	
+		<genero>
+			Baladas
+		</genero>
+		<compania>
+			Sony Music
+		</compania>
+	</solista>
+	<solista id="03">
+		<nombre>
+			Bad Bunny
+		</nombre>	
+		<genero>
+			Regueton
+		</genero>
+		<compania>
+			Garbage Inc
+		</compania>
+	</solista>
+</solistas>
+</musica>
