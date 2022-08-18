@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="754f5f04a27848238c4c06fd915cb868" Name="Diagram1">
+        <EntityTypeShape EntityType="ejercicioModel.puesto" Width="1.5" PointX="3.125" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ejercicioModel.sueldo" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ejercicioModel.trabajador" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ejercicioModel.usuarios" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <AssociationConnector Association="ejercicioModel.FK__sueldo__id_traba__4316F928" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ejercicioModel.pagos" Width="1.5" PointX="5.375" PointY="2.125" />
+        <AssociationConnector Association="ejercicioModel.FK__pagos__id_puesto__5FB337D6" />
+        <AssociationConnector Association="ejercicioModel.FK__pagos__id_trabaj__5EBF139D" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
