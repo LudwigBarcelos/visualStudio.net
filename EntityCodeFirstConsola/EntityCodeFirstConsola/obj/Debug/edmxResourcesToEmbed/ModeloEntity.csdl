@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ejercicioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="pagos">
+    <Key>
+      <PropertyRef Name="id_pagos" />
+    </Key>
+    <Property Name="id_pagos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_trabajador" Type="Int32" Nullable="false" />
+    <Property Name="id_puesto" Type="Int32" Nullable="false" />
+    <Property Name="fechapago" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="semanas" Type="Int32" Nullable="false" />
+    <Property Name="montopago" Type="Double" Nullable="false" />
+    <NavigationProperty Name="puesto" Relationship="Self.FK__pagos__id_puesto__5FB337D6" FromRole="pagos" ToRole="puesto" />
+    <NavigationProperty Name="trabajador" Relationship="Self.FK__pagos__id_trabaj__5EBF139D" FromRole="pagos" ToRole="trabajador" />
+  </EntityType>
+  <EntityType Name="puesto">
+    <Key>
+      <PropertyRef Name="id_puesto" />
+    </Key>
+    <Property Name="id_puesto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="puesto1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cargo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tareas" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="pagos" Relationship="Self.FK__pagos__id_puesto__5FB337D6" FromRole="puesto" ToRole="pagos" />
+  </EntityType>
+  <EntityType Name="sueldo">
+    <Key>
+      <PropertyRef Name="id_sueldo" />
+    </Key>
+    <Property Name="id_sueldo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_trabajador" Type="Int32" Nullable="false" />
+    <Property Name="id_puesto" Type="Int32" Nullable="false" />
+    <Property Name="sueldo1" Type="Double" Nullable="false" />
+    <NavigationProperty Name="trabajador" Relationship="Self.FK__sueldo__id_traba__4316F928" FromRole="sueldo" ToRole="trabajador" />
+  </EntityType>
+  <EntityType Name="trabajador">
+    <Key>
+      <PropertyRef Name="id_trabajador" />
+    </Key>
+    <Property Name="id_trabajador" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellido_pat" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellido_mat" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="direccion" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telefono" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="num_empleado" Type="Int32" Nullable="false" />
+    <Property Name="id_usuario" Type="Int32" Nullable="false" />
+    <Property Name="id_puesto" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="pagos" Relationship="Self.FK__pagos__id_trabaj__5EBF139D" FromRole="trabajador" ToRole="pagos" />
+    <NavigationProperty Name="sueldo" Relationship="Self.FK__sueldo__id_traba__4316F928" FromRole="trabajador" ToRole="sueldo" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="usuario" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="passwd" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="estado" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="tipo_usuario" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <Association Name="FK__pagos__id_puesto__5FB337D6">
+    <End Role="puesto" Type="Self.puesto" Multiplicity="1" />
+    <End Role="pagos" Type="Self.pagos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="puesto">
+        <PropertyRef Name="id_puesto" />
+      </Principal>
+      <Dependent Role="pagos">
+        <PropertyRef Name="id_puesto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pagos__id_trabaj__5EBF139D">
+    <End Role="trabajador" Type="Self.trabajador" Multiplicity="1" />
+    <End Role="pagos" Type="Self.pagos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="trabajador">
+        <PropertyRef Name="id_trabajador" />
+      </Principal>
+      <Dependent Role="pagos">
+        <PropertyRef Name="id_trabajador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__sueldo__id_traba__4316F928">
+    <End Role="trabajador" Type="Self.trabajador" Multiplicity="1" />
+    <End Role="sueldo" Type="Self.sueldo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="trabajador">
+        <PropertyRef Name="id_trabajador" />
+      </Principal>
+      <Dependent Role="sueldo">
+        <PropertyRef Name="id_trabajador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ejercicioEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="pagos" EntityType="Self.pagos" />
+    <EntitySet Name="puesto" EntityType="Self.puesto" />
+    <EntitySet Name="sueldo" EntityType="Self.sueldo" />
+    <EntitySet Name="trabajador" EntityType="Self.trabajador" />
+    <EntitySet Name="usuarios" EntityType="Self.usuarios" />
+    <AssociationSet Name="FK__pagos__id_puesto__5FB337D6" Association="Self.FK__pagos__id_puesto__5FB337D6">
+      <End Role="puesto" EntitySet="puesto" />
+      <End Role="pagos" EntitySet="pagos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pagos__id_trabaj__5EBF139D" Association="Self.FK__pagos__id_trabaj__5EBF139D">
+      <End Role="trabajador" EntitySet="trabajador" />
+      <End Role="pagos" EntitySet="pagos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__sueldo__id_traba__4316F928" Association="Self.FK__sueldo__id_traba__4316F928">
+      <End Role="trabajador" EntitySet="trabajador" />
+      <End Role="sueldo" EntitySet="sueldo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

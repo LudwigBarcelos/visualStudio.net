@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ejercicioModelStoreContainer" CdmEntityContainer="ejercicioEntities">
+    <EntitySetMapping Name="pagos">
+      <EntityTypeMapping TypeName="ejercicioModel.pagos">
+        <MappingFragment StoreEntitySet="pagos">
+          <ScalarProperty Name="id_pagos" ColumnName="id_pagos" />
+          <ScalarProperty Name="id_trabajador" ColumnName="id_trabajador" />
+          <ScalarProperty Name="id_puesto" ColumnName="id_puesto" />
+          <ScalarProperty Name="fechapago" ColumnName="fechapago" />
+          <ScalarProperty Name="semanas" ColumnName="semanas" />
+          <ScalarProperty Name="montopago" ColumnName="montopago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="puesto">
+      <EntityTypeMapping TypeName="ejercicioModel.puesto">
+        <MappingFragment StoreEntitySet="puesto">
+          <ScalarProperty Name="id_puesto" ColumnName="id_puesto" />
+          <ScalarProperty Name="puesto1" ColumnName="puesto" />
+          <ScalarProperty Name="cargo" ColumnName="cargo" />
+          <ScalarProperty Name="tareas" ColumnName="tareas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sueldo">
+      <EntityTypeMapping TypeName="ejercicioModel.sueldo">
+        <MappingFragment StoreEntitySet="sueldo">
+          <ScalarProperty Name="id_sueldo" ColumnName="id_sueldo" />
+          <ScalarProperty Name="id_trabajador" ColumnName="id_trabajador" />
+          <ScalarProperty Name="id_puesto" ColumnName="id_puesto" />
+          <ScalarProperty Name="sueldo1" ColumnName="sueldo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trabajador">
+      <EntityTypeMapping TypeName="ejercicioModel.trabajador">
+        <MappingFragment StoreEntitySet="trabajador">
+          <ScalarProperty Name="id_trabajador" ColumnName="id_trabajador" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido_pat" ColumnName="apellido_pat" />
+          <ScalarProperty Name="apellido_mat" ColumnName="apellido_mat" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="num_empleado" ColumnName="num_empleado" />
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="id_puesto" ColumnName="id_puesto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="ejercicioModel.usuarios">
+        <MappingFragment StoreEntitySet="usuarios">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="passwd" ColumnName="passwd" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="tipo_usuario" ColumnName="tipo_usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

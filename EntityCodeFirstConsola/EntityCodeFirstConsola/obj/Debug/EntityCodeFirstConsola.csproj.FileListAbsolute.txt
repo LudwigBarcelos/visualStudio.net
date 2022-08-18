@@ -1,0 +1,13 @@
+C:\Users\ludwi\source\repos\EntityCodeFirstConsola\EntityCodeFirstConsola\bin\Debug\EntityCodeFirstConsola.exe.config
+C:\Users\ludwi\source\repos\EntityCodeFirstConsola\EntityCodeFirstConsola\bin\Debug\EntityCodeFirstConsola.exe
+C:\Users\ludwi\source\repos\EntityCodeFirstConsola\EntityCodeFirstConsola\bin\Debug\EntityCodeFirstConsola.pdb
+C:\Users\ludwi\source\repos\EntityCodeFirstConsola\EntityCodeFirstConsola\bin\Debug\EntityFramework.dll
+C:\Users\ludwi\source\repos\EntityCodeFirstConsola\EntityCodeFirstConsola\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ludwi\source\repos\EntityCodeFirstConsola\EntityCodeFirstConsola\bin\Debug\EntityFramework.xml
+C:\Users\ludwi\source\repos\EntityCodeFirstConsola\EntityCodeFirstConsola\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ludwi\source\repos\EntityCodeFirstConsola\EntityCodeFirstConsola\obj\Debug\EntityCodeFirstConsola.csproj.AssemblyReference.cache
+C:\Users\ludwi\source\repos\EntityCodeFirstConsola\EntityCodeFirstConsola\obj\Debug\EntityCodeFirstConsola.csproj.SuggestedBindingRedirects.cache
+C:\Users\ludwi\source\repos\EntityCodeFirstConsola\EntityCodeFirstConsola\obj\Debug\EntityCodeFirstConsola.csproj.CoreCompileInputs.cache
+C:\Users\ludwi\source\repos\EntityCodeFirstConsola\EntityCodeFirstConsola\obj\Debug\EntityCodeFirstConsola.csproj.CopyComplete
+C:\Users\ludwi\source\repos\EntityCodeFirstConsola\EntityCodeFirstConsola\obj\Debug\EntityCodeFirstConsola.exe
+C:\Users\ludwi\source\repos\EntityCodeFirstConsola\EntityCodeFirstConsola\obj\Debug\EntityCodeFirstConsola.pdb

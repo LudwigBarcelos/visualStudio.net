@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ejercicioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="pagos">
+          <Key>
+            <PropertyRef Name="id_pagos" />
+          </Key>
+          <Property Name="id_pagos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_trabajador" Type="int" Nullable="false" />
+          <Property Name="id_puesto" Type="int" Nullable="false" />
+          <Property Name="fechapago" Type="date" Nullable="false" />
+          <Property Name="semanas" Type="int" Nullable="false" />
+          <Property Name="montopago" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="puesto">
+          <Key>
+            <PropertyRef Name="id_puesto" />
+          </Key>
+          <Property Name="id_puesto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="puesto" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="cargo" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="tareas" Type="varchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sueldo">
+          <Key>
+            <PropertyRef Name="id_sueldo" />
+          </Key>
+          <Property Name="id_sueldo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_trabajador" Type="int" Nullable="false" />
+          <Property Name="id_puesto" Type="int" Nullable="false" />
+          <Property Name="sueldo" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="trabajador">
+          <Key>
+            <PropertyRef Name="id_trabajador" />
+          </Key>
+          <Property Name="id_trabajador" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="apellido_pat" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="apellido_mat" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="direccion" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="telefono" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="num_empleado" Type="int" Nullable="false" />
+          <Property Name="id_usuario" Type="int" Nullable="false" />
+          <Property Name="id_puesto" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="usuarios">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="usuario" Type="nchar" MaxLength="10" />
+          <Property Name="passwd" Type="nchar" MaxLength="10" />
+          <Property Name="estado" Type="nchar" MaxLength="10" />
+          <Property Name="tipo_usuario" Type="nchar" MaxLength="20" />
+        </EntityType>
+        <Association Name="FK__pagos__id_puesto__5FB337D6">
+          <End Role="puesto" Type="Self.puesto" Multiplicity="1" />
+          <End Role="pagos" Type="Self.pagos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="puesto">
+              <PropertyRef Name="id_puesto" />
+            </Principal>
+            <Dependent Role="pagos">
+              <PropertyRef Name="id_puesto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__pagos__id_trabaj__5EBF139D">
+          <End Role="trabajador" Type="Self.trabajador" Multiplicity="1" />
+          <End Role="pagos" Type="Self.pagos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trabajador">
+              <PropertyRef Name="id_trabajador" />
+            </Principal>
+            <Dependent Role="pagos">
+              <PropertyRef Name="id_trabajador" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__sueldo__id_traba__4316F928">
+          <End Role="trabajador" Type="Self.trabajador" Multiplicity="1" />
+          <End Role="sueldo" Type="Self.sueldo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trabajador">
+              <PropertyRef Name="id_trabajador" />
+            </Principal>
+            <Dependent Role="sueldo">
+              <PropertyRef Name="id_trabajador" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ejercicioModelStoreContainer">
+          <EntitySet Name="pagos" EntityType="Self.pagos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="puesto" EntityType="Self.puesto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sueldo" EntityType="Self.sueldo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="trabajador" EntityType="Self.trabajador" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__pagos__id_puesto__5FB337D6" Association="Self.FK__pagos__id_puesto__5FB337D6">
+            <End Role="puesto" EntitySet="puesto" />
+            <End Role="pagos" EntitySet="pagos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__pagos__id_trabaj__5EBF139D" Association="Self.FK__pagos__id_trabaj__5EBF139D">
+            <End Role="trabajador" EntitySet="trabajador" />
+            <End Role="pagos" EntitySet="pagos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__sueldo__id_traba__4316F928" Association="Self.FK__sueldo__id_traba__4316F928">
+            <End Role="trabajador" EntitySet="trabajador" />
+            <End Role="sueldo" EntitySet="sueldo" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ejercicioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="pagos">
+          <Key>
+            <PropertyRef Name="id_pagos" />
+          </Key>
+          <Property Name="id_pagos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_trabajador" Type="Int32" Nullable="false" />
+          <Property Name="id_puesto" Type="Int32" Nullable="false" />
+          <Property Name="fechapago" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="semanas" Type="Int32" Nullable="false" />
+          <Property Name="montopago" Type="Double" Nullable="false" />
+          <NavigationProperty Name="puesto" Relationship="Self.FK__pagos__id_puesto__5FB337D6" FromRole="pagos" ToRole="puesto" />
+          <NavigationProperty Name="trabajador" Relationship="Self.FK__pagos__id_trabaj__5EBF139D" FromRole="pagos" ToRole="trabajador" />
+        </EntityType>
+        <EntityType Name="puesto">
+          <Key>
+            <PropertyRef Name="id_puesto" />
+          </Key>
+          <Property Name="id_puesto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="puesto1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cargo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tareas" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="pagos" Relationship="Self.FK__pagos__id_puesto__5FB337D6" FromRole="puesto" ToRole="pagos" />
+        </EntityType>
+        <EntityType Name="sueldo">
+          <Key>
+            <PropertyRef Name="id_sueldo" />
+          </Key>
+          <Property Name="id_sueldo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_trabajador" Type="Int32" Nullable="false" />
+          <Property Name="id_puesto" Type="Int32" Nullable="false" />
+          <Property Name="sueldo1" Type="Double" Nullable="false" />
+          <NavigationProperty Name="trabajador" Relationship="Self.FK__sueldo__id_traba__4316F928" FromRole="sueldo" ToRole="trabajador" />
+        </EntityType>
+        <EntityType Name="trabajador">
+          <Key>
+            <PropertyRef Name="id_trabajador" />
+          </Key>
+          <Property Name="id_trabajador" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="apellido_pat" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="apellido_mat" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="direccion" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="telefono" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="num_empleado" Type="Int32" Nullable="false" />
+          <Property Name="id_usuario" Type="Int32" Nullable="false" />
+          <Property Name="id_puesto" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="pagos" Relationship="Self.FK__pagos__id_trabaj__5EBF139D" FromRole="trabajador" ToRole="pagos" />
+          <NavigationProperty Name="sueldo" Relationship="Self.FK__sueldo__id_traba__4316F928" FromRole="trabajador" ToRole="sueldo" />
+        </EntityType>
+        <EntityType Name="usuarios">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="usuario" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="passwd" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="estado" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="tipo_usuario" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <Association Name="FK__pagos__id_puesto__5FB337D6">
+          <End Role="puesto" Type="Self.puesto" Multiplicity="1" />
+          <End Role="pagos" Type="Self.pagos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="puesto">
+              <PropertyRef Name="id_puesto" />
+            </Principal>
+            <Dependent Role="pagos">
+              <PropertyRef Name="id_puesto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__pagos__id_trabaj__5EBF139D">
+          <End Role="trabajador" Type="Self.trabajador" Multiplicity="1" />
+          <End Role="pagos" Type="Self.pagos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trabajador">
+              <PropertyRef Name="id_trabajador" />
+            </Principal>
+            <Dependent Role="pagos">
+              <PropertyRef Name="id_trabajador" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__sueldo__id_traba__4316F928">
+          <End Role="trabajador" Type="Self.trabajador" Multiplicity="1" />
+          <End Role="sueldo" Type="Self.sueldo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trabajador">
+              <PropertyRef Name="id_trabajador" />
+            </Principal>
+            <Dependent Role="sueldo">
+              <PropertyRef Name="id_trabajador" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ejercicioEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="pagos" EntityType="Self.pagos" />
+          <EntitySet Name="puesto" EntityType="Self.puesto" />
+          <EntitySet Name="sueldo" EntityType="Self.sueldo" />
+          <EntitySet Name="trabajador" EntityType="Self.trabajador" />
+          <EntitySet Name="usuarios" EntityType="Self.usuarios" />
+          <AssociationSet Name="FK__pagos__id_puesto__5FB337D6" Association="Self.FK__pagos__id_puesto__5FB337D6">
+            <End Role="puesto" EntitySet="puesto" />
+            <End Role="pagos" EntitySet="pagos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__pagos__id_trabaj__5EBF139D" Association="Self.FK__pagos__id_trabaj__5EBF139D">
+            <End Role="trabajador" EntitySet="trabajador" />
+            <End Role="pagos" EntitySet="pagos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__sueldo__id_traba__4316F928" Association="Self.FK__sueldo__id_traba__4316F928">
+            <End Role="trabajador" EntitySet="trabajador" />
+            <End Role="sueldo" EntitySet="sueldo" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ejercicioModelStoreContainer" CdmEntityContainer="ejercicioEntities">
+          <EntitySetMapping Name="pagos">
+            <EntityTypeMapping TypeName="ejercicioModel.pagos">
+              <MappingFragment StoreEntitySet="pagos">
+                <ScalarProperty Name="id_pagos" ColumnName="id_pagos" />
+                <ScalarProperty Name="id_trabajador" ColumnName="id_trabajador" />
+                <ScalarProperty Name="id_puesto" ColumnName="id_puesto" />
+                <ScalarProperty Name="fechapago" ColumnName="fechapago" />
+                <ScalarProperty Name="semanas" ColumnName="semanas" />
+                <ScalarProperty Name="montopago" ColumnName="montopago" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="puesto">
+            <EntityTypeMapping TypeName="ejercicioModel.puesto">
+              <MappingFragment StoreEntitySet="puesto">
+                <ScalarProperty Name="id_puesto" ColumnName="id_puesto" />
+                <ScalarProperty Name="puesto1" ColumnName="puesto" />
+                <ScalarProperty Name="cargo" ColumnName="cargo" />
+                <ScalarProperty Name="tareas" ColumnName="tareas" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sueldo">
+            <EntityTypeMapping TypeName="ejercicioModel.sueldo">
+              <MappingFragment StoreEntitySet="sueldo">
+                <ScalarProperty Name="id_sueldo" ColumnName="id_sueldo" />
+                <ScalarProperty Name="id_trabajador" ColumnName="id_trabajador" />
+                <ScalarProperty Name="id_puesto" ColumnName="id_puesto" />
+                <ScalarProperty Name="sueldo1" ColumnName="sueldo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="trabajador">
+            <EntityTypeMapping TypeName="ejercicioModel.trabajador">
+              <MappingFragment StoreEntitySet="trabajador">
+                <ScalarProperty Name="id_trabajador" ColumnName="id_trabajador" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apellido_pat" ColumnName="apellido_pat" />
+                <ScalarProperty Name="apellido_mat" ColumnName="apellido_mat" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="num_empleado" ColumnName="num_empleado" />
+                <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+                <ScalarProperty Name="id_puesto" ColumnName="id_puesto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usuarios">
+            <EntityTypeMapping TypeName="ejercicioModel.usuarios">
+              <MappingFragment StoreEntitySet="usuarios">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="usuario" ColumnName="usuario" />
+                <ScalarProperty Name="passwd" ColumnName="passwd" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="tipo_usuario" ColumnName="tipo_usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
